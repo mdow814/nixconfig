@@ -23,7 +23,7 @@
       fsType = "vfat";
     };
     
-  fileSystems."/home/mdow"=
+  fileSystems."/home/mdow" =
     { device = "hpool/USERDATA/mdow_3a5x4z";
       fsType = "zfs";
     };
