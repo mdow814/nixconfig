@@ -77,6 +77,7 @@
     barrier
     papirus-icon-theme
     gnome3.file-roller
+    neofetch
   ];
   
   system.stateVersion = "unstable";
