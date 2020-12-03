@@ -22,6 +22,7 @@
     { device = "/dev/disk/by-uuid/9D5E-BF85";
       fsType = "vfat";
     };
+    
   fileSystems."/home/mdow"=
     { device = "hpool/USERDATA/mdow_3a5x4z";
       fsType = "zfs";
