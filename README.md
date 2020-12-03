@@ -1,1 +1,1 @@
-# nixconfig
+nixconfig
