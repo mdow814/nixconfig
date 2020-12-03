@@ -74,7 +74,8 @@
     virt-manager
     plank
     vscode
-    barrier 
+    barrier
+    papirus-icon-theme 
   ];
   
   system.stateVersion = "unstable";
