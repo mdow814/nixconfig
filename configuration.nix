@@ -52,7 +52,7 @@
   
   users.users.mdow = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "video" "audio" ]; # Enable ‘sudo’ for the user.
   };
   
   # needed for steam/chrome
