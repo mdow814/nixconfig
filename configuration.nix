@@ -33,7 +33,7 @@
       prefixLength = 24;
     } ];
   };
-  networking.defaultGateway = "192.168.1.5";
+  networking.defaultGateway = "192.168.1.1";
   networking.nameservers = [ "1.1.1.1" ];
   networking.hostId = "854260d3";
   networking.firewall.allowedTCPPorts = [ 22 24800 ];
