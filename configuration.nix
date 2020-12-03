@@ -78,6 +78,8 @@
     papirus-icon-theme
     gnome3.file-roller
     neofetch
+    gnome3.adwaita-icon-theme
+    hicolor-icon-theme
   ];
   
   system.stateVersion = "unstable";
