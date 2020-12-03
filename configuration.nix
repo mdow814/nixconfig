@@ -76,7 +76,7 @@
     vscode
     barrier
     papirus-icon-theme
-    file-roller
+    gnome3.file-roller
   ];
   
   system.stateVersion = "unstable";
