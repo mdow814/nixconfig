@@ -75,7 +75,8 @@
     plank
     vscode
     barrier
-    papirus-icon-theme 
+    papirus-icon-theme
+    file-roller
   ];
   
   system.stateVersion = "unstable";
