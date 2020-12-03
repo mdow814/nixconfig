@@ -26,9 +26,17 @@
   
   networking.hostName = "ni14ae"; 
   networking.useDHCP = false;
-  networking.interfaces.enp39s0.useDHCP = true;
-  networking.interfaces.enp49s0f3u1u3.useDHCP = true;
+  networking.interfaces.enp39s0 = {
+    useDHCP = false;
+    ipv4.addresses = [ {
+      address = "192.168.1.5";
+      prefixLength = 24;
+    } ];
+  };
+  networking.defaultGateway = "192.168.1.5";
+  networking.nameservers = [ "1.1.1.1" ];
   networking.hostId = "854260d3";
+  networking.firewall.allowedTCPPorts = [ 22 24800 ];
   
   i18n.defaultLocale = "en_US.UTF-8";
   
@@ -37,7 +45,8 @@
   services.xserver.desktopManager.xfce.enable = true;
   services.xserver.layout = "us";
   services.bamf.enable = true;
-  
+  services.openssh.enable = true; 
+
   sound.enable = true;
   hardware.pulseaudio.enable = true;
   
@@ -63,12 +72,12 @@
     arc-theme
     steam 
     virt-manager
-    plank 
+    plank
+    vscode
+    barrier 
   ];
   
-  services.openssh.enable = true;
-  
-  system.stateVersion = "unstable"; # Did you read the comment?
+  system.stateVersion = "unstable";
 
 }
 
