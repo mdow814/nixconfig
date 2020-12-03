@@ -9,7 +9,19 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  
+  boot.kernelModules = [ 
+    "kvm-amd" 
+    "vfio"
+    "vfio_iommu_type1"
+    "vfio-pci" 
+  ];
+  boot.kernelParams = [ 
+    "amd_iommu=on"
+    "vfio-pci.ids=1002:67df,1002:aaf0"
+    "kvm.ignore_msrs=1"
+  ]; 
+  virtualisation.libvirtd.enable = true;
+ 
   time.timeZone = "EST5EDT";
   
   networking.hostName = "ni14ae"; 
@@ -24,6 +36,7 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
   services.xserver.layout = "us";
+  services.bamf.enable = true;
   
   sound.enable = true;
   hardware.pulseaudio.enable = true;
@@ -49,7 +62,8 @@
     xfce.xfce4-whiskermenu-plugin 
     arc-theme
     steam 
-    virt-manager 
+    virt-manager
+    plank 
   ];
   
   services.openssh.enable = true;
