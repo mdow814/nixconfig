@@ -41,19 +41,11 @@
   i18n.defaultLocale = "en_US.UTF-8";
   
   services.xserver.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
   services.xserver.layout = "us";
   services.bamf.enable = true;
   services.openssh.enable = true; 
-  services.picom = {
-   enable = true;
-   fade = true;
-   inactiveOpacity = 0.9;
-   shadow = true;
-   fadeDelta = 4;
-  };
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;
@@ -76,7 +68,6 @@
     git
     firefox 
     google-chrome
-    xfce.xfce4-whiskermenu-plugin 
     arc-theme
     (steam.override { extraPkgs = pkgs: [ mono gtk3 gtk3-x11 zlib ];}) 
     virt-manager
